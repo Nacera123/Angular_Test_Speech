@@ -1,0 +1,16 @@
+<div class="orange-border">
+    <p>liens works!</p>
+
+
+    <ul>
+        <li><a [routerLink]="['/']">Acceuil</a></li>
+        <li><a [routerLink]="['/about']">A prpos</a></li>
+        <li><a [routerLink]="['/contact']">contact</a></li>
+        <li><a [routerLink]="['/search/12']">rechercher</a></li>
+        <li><a [routerLink]="['/search', param1]">rechercher</a></li>
+        <li><a [routerLink]="['/http']">Http</a></li>
+
+        <button (click)="goto(24)">Aller page 24</button>
+        <button (click)="goto1()">Aller page param dynamique {{ param2 }}</button>
+    </ul>
+</div>

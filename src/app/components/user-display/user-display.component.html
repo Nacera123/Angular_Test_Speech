@@ -1,0 +1,25 @@
+<div class="blue-border">
+    <p>user-display works!</p>
+
+    <div>
+
+        <button class="btn btn-outline-info" (click)="makeUserList()">Display All Users</button>
+
+        <p *ngIf="requestStarted"><small>loading....</small></p>
+
+        <div *ngIf="loaded" class="display">
+            <div *ngFor="let user of userList">
+
+                <ul>
+                    <li>id : {{ user.id }}</li>
+                    <li>Name : {{ user.name }}</li>
+                    <li>Email : {{ user.email }}</li>
+                    <li>Address : {{ user.city }}</li>
+                </ul>
+                <hr>
+
+            </div>
+
+        </div>
+    </div>
+</div>

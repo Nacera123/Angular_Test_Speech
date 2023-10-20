@@ -1,0 +1,33 @@
+<div class="red-border">
+    <p>liste-employes works!</p>
+
+    <ul *ngFor="let e of listemployes; let idx = index; let premier = first; let dernier = last; let impair = odd;let paire = even"
+        [ngStyle]="{color: premier ? 'purple': ''}" [ngClass]="{'red-color': dernier}">
+        <li *ngIf="premier">{{ e.nom }}</li>
+        <li *ngIf="!premier">Employé n° {{ idx + 1 }}</li>
+        <li>{{ e.prenom }}</li>
+        <li>{{ e.fonction }}</li>
+    </ul>
+
+
+    <h1>Quelques Pipes usuelles</h1>
+    <small>pipe CURRENCY</small>
+    <p><span>{{ 1234.56 | currency: 'USD' }}</span></p>
+    <p><span>{{ 1234.56 | currency: 'EUR' }}</span></p>
+
+    <small>pipe DATEVAL</small>
+    <p><span>{{ uneDate | date: 'shortTime' }}</span></p>
+    <p><span>{{ uneDate | date: 'fullDate' }}</span></p>
+    <p><span>{{ uneDate | date: 'd/M/y' }}</span></p>
+    <p><span>{{ uneDate | date: 'dd/MM/yy, à HH:mm' }}</span></p>
+    <p><span>{{ uneDate | date: 'longDate' }}</span></p>
+
+    <small>pipe TitleCase</small>
+    <p><span>{{ 'UNE CHAINE MAL formaté' | titlecase }}</span></p>
+
+    <small>pipe LOWERCASE</small>
+    <p><span>{{ 'UNE CHAINE EN MINUSCULE' | lowercase }}</span></p>
+    <small>pipe UPPERCASE</small>
+    <p><span>{{ 'une chaine en miniscule' | uppercase }}</span></p>
+
+</div>

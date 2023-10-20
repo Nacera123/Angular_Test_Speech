@@ -1,0 +1,17 @@
+.green-border{
+    border: solid 2px greenyellow;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.has-danger input, .has-danger select{
+    border : 2px solid red;
+}
+.has-success input, .has-success select{
+    border : 2px solid green;
+}
+
+.form-cotrol-feedback{
+    color: red;
+    font-size: 12px;
+}

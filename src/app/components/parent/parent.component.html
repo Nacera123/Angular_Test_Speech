@@ -1,0 +1,5 @@
+<div class="purple-border">
+    <p>parent work</p>
+    <small>vous avez cliqué sur {{ donneeClique |ucfirst }}</small>
+    <app-enfant [tuyauData]="data" (emetteur)="receptionEvenement($event)" />
+</div>

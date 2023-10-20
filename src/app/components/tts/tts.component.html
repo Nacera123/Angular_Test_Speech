@@ -1,0 +1,14 @@
+<div class="tts">
+    <p>tts works!</p>
+    <div class="d-flex flex-column justify-content-center align-content-center">
+
+        <textarea [(ngModel)]="sourceText" class="w-50 mx-auto mb-3" style="font-size: 12px">{{ sourceText }}</textarea>
+
+        <button (click)="getVoiceFile()" class="w-50 mx-auto">Envoyer</button>
+
+        <div class="audio-container">
+            <audio class=" d-block mx-auto" [src]="audioSrc" controls autoplay #audioElement></audio>
+        </div>
+
+    </div>
+</div>
